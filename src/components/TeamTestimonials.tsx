@@ -45,7 +45,9 @@ const TeamTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(startIndex);
   const [isAnimating, setIsAnimating] = useState(false);
   const [itemsPerView, setItemsPerView] = useState(3);
+  const [isInView, setIsInView] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   // Handle responsive items per view
   useEffect(() => {
@@ -62,6 +64,29 @@ const TeamTestimonials = () => {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Intersection Observer to detect if component is in viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the component is visible
+        rootMargin: '0px 0px -100px 0px' // Add some margin to trigger earlier
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
   const nextSlide = () => {
@@ -121,14 +146,16 @@ const TeamTestimonials = () => {
     return (currentIndex - startIndex + teamMembers.length) % teamMembers.length;
   };
 
-  // Auto-play functionality
+  // Auto-play functionality - only when component is in view
   useEffect(() => {
+    if (!isInView) return;
+    
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isInView]);
 
   return (
-    <section className="py-32 px-6 bg-muted/30">
+    <section ref={sectionRef} className="py-32 px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

@@ -60,17 +60,21 @@ const Solutions = () => {
   ];
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-24 md:py-32 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            A Full-Cycle Partner in Battery Technology
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            Our Solutions
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-balance leading-tight">
+            A Full-Cycle Partner in 
+            <span className="text-primary"> Battery Technology</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We provide integrated solutions that cover the entire battery value chain.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We provide integrated solutions that cover the entire battery value chain—from intelligent management to sustainable recycling.
           </p>
         </div>
-        <div className="grid gap-8">
+        <div className="grid gap-6 md:gap-8">
           {solutions.map((solution, index) => (
             <SolutionCard key={index} {...solution} />
           ))}
