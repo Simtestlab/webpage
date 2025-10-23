@@ -10,14 +10,6 @@ const Hero = () => {
         <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto text-balance">
           We are your end-to-end partner in battery technology—from intelligent management and scalable storage to full-circle sustainability.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <Button size="lg" variant="default" className="text-lg px-8 py-6">
-            Discover Our Solutions
-          </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-            Contact Our Experts
-          </Button>
-        </div>
       </div>
     </section>
   );
