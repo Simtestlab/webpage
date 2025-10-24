@@ -1,4 +1,39 @@
+import React, { useState, type ChangeEvent } from 'react';
+
 const Footer = () => {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [status, setStatus] = useState<{ type: 'idle' | 'sending' | 'success' | 'error'; msg?: string }>({ type: 'idle' });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((s) => ({ ...s, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ type: 'sending' });
+
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      console.log("Response:", res);
+
+      if (res.ok) {
+        setStatus({ type: 'success', msg: 'Message sent — we will contact you shortly.' });
+        setForm({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setStatus({ type: 'error', msg: data?.error || 'Error sending message' });
+      }
+    } catch (err) {
+      setStatus({ type: 'error', msg: 'Network error. Please try again later.' });
+    }
+  };
+
   return (
   <footer className="bg-background scroll-mt-12 md:scroll-mt-17" id="contact">
       {/* CTA Section */}
@@ -19,41 +54,68 @@ const Footer = () => {
           {/* Contact Form */}
           <div className="bg-background p-4 md:p-6 lg:p-8 w-full max-w-2xl">
             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-center">Get In Touch</h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Name"
+                  required
                   className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   type="email"
                   placeholder="Email"
+                  required
                   className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
                   type="tel"
                   placeholder="Phone Number"
                   className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
                 <input
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Subject"
                   className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
               </div>
               <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 placeholder="Message"
                 rows={4}
+                required
                 className="w-full px-4 py-3 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none"
-              ></textarea>
+              />
+
+              {status.type === 'success' && (
+                <p className="text-sm text-green-600">{status.msg}</p>
+              )}
+              {status.type === 'error' && (
+                <p className="text-sm text-destructive">{status.msg}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-muted hover:bg-muted/80 text-foreground py-3 px-6 rounded-md transition-colors font-medium"
+                disabled={status.type === 'sending'}
+                className={`w-full ${status.type === 'sending' ? 'opacity-70 cursor-not-allowed' : 'hover:bg-muted/80'} bg-muted text-foreground py-3 px-6 rounded-md transition-colors font-medium`}
               >
-                Send Message
+                {status.type === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
