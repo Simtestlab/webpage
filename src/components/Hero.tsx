@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden" id="hero">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/images/ev-charging-bg.jpg')`
-        }}
+      {/* Background image (lazy-loaded <img> to avoid blocking initial render) */}
+      <img
+        src="/images/ev-charging-bg.jpg"
+        loading="lazy"
+        decoding="async"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
       />
       
       {/* Overlay for better text readability */}
