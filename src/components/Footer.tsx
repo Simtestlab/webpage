@@ -14,23 +14,28 @@ const Footer = () => {
     setStatus({ type: 'sending' });
 
     try {
-      const res = await fetch('/api/send-email', {
+      const res = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
 
-      console.log("Response:", res);
-
       if (res.ok) {
         setStatus({ type: 'success', msg: 'Message sent — we will contact you shortly.' });
         setForm({ name: '', email: '', phone: '', subject: '', message: '' });
       } else {
-        const data = await res.json().catch(() => ({}));
-        setStatus({ type: 'error', msg: data?.error || 'Error sending message' });
+        // Provide a clearer message for common development misconfigurations
+        if (res.status === 404) {
+          setStatus({ type: 'error', msg: 'Function not found (404). Make sure you opened the app via the Netlify dev URL printed in the terminal (not Vite). Restart `netlify dev` and open that URL.' });
+        } else {
+          const data = await res.json().catch(() => ({}));
+          setStatus({ type: 'error', msg: data?.error || `Error sending message (status ${res.status})` });
+        }
       }
     } catch (err) {
-      setStatus({ type: 'error', msg: 'Network error. Please try again later.' });
+      // Network error often means Netlify dev isn't reachable from the origin
+      console.error('Contact form network error:', err);
+      setStatus({ type: 'error', msg: 'Error sending Mail.' });
     }
   };
 
