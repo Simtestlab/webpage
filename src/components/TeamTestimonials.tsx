@@ -6,87 +6,87 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const TeamTestimonials = () => {
   const teamMembers = [
     {
-      name: "Rameshkumar Rajarathinam",
-      designation: "Chief Technology Officer",
-      description: "Leading our R&D initiatives with 15+ years in battery technology and renewable energy systems. Pioneering next-generation BMS solutions.",
+      name: "Rameshkumar Rajarathanam",
+      designation: "CEO | Software/Simulation Specialist",
+      description: "Expert in developing Hardware-in-the-Loop (HIL) simulators, with extensive experience in C programming and MATLAB scripting.",
       image: "/team/RameshKumar.png"
     },
     {
-      name: "Faouzi",
-      designation: "Head of Engineering",
-      description: "Overseeing product development and ensuring our systems meet the highest safety standards. Expert in grid-scale energy storage solutions.",
+      name: "Tiberiu Stanciu",
+      designation: "Renewable Energy Specialist",
+      description: "A renewable energy consultant assists clients in conducting investigations in order to better understand and direct the installation of renewable energy systems.",
+      image: "/team/Tiberiu.png"
+    },
+    {
+      name: "Faouzi AL MOUTAMID",
+      designation: "Battery Management Specialist",
+      description: "The Energy Specialist is primarily responsible for completing walk through energy efficiency assessments",
       image: "/team/Faouzi.png"
     },
     {
-      name: "Fabio",
-      designation: "Director of Sustainability",
-      description: "Driving our commitment to sustainable practices and circular economy principles. Leading our battery recycling and second-life programs.",
+      name: "Fabio Delgado Cabrera",
+      designation: "Senior Data Engineer",
+      description: "Senior Data Engineer is responsible for creating effective technological solutions for work with big data.",
       image: "/team/Fabio.png"
     },
     {
-      name: "Prabhakaran",
-      designation: "VP of Operations",
-      description: "Ensuring seamless delivery and deployment of our energy solutions worldwide. 20+ years experience in industrial automation.",
+      name: "Yashar Mohammed",
+      designation: "Senior Lead Engineer Connectivity",
+      description: "Lead Engineers manage engineering teams, oversee project development, ensure code quality, and collaborate with other departments to meet project goals.",
+      image: "/team/Yashar.png"
+    },
+    {
+      name: "Prabhakaran Sundaralingam",
+      designation: "Hardware Engineer",
+      description: "A seasoned Hardware Engineer with over 5 years of experience in electronics product development, focusing on the entire lifecycle from circuit design to design verification testing.",
       image: "/team/Prabhakaran.png"
     },
     {
-      name: "Rajavel Rajendran",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Rajavel Rajendiran",
+      designation: "SSenior Software Engineer",
+      description: "The Senior Software Engineer drives model-based development and testing for Battery Management Systems (BMS).",
       image: "/team/Rajavelu.png"
     },
     {
-      name: "Nalla Shivam ",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Nallasivam Selvaraj",
+      designation: "Software Engineer",
+      description: "Experienced Software Engineer with expertise in DevOps, Python, C++ and software development, specializing in application development and user interface design.",
       image: "/team/Nallasivam.png"
     },
     {
       name: "Hari Ramar",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      designation: "Web Developer",
+      description: "Specializes in building scalable and efficient web applications using a diverse technology stack, including React, Node.js, Express, PostgreSQL, Django, and Flask.",
       image: "/team/Hari.png"
     },
     {
-      name: "Akilasekar",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Akilasekar Kalirajan",
+      designation: "System Engineer",
+      description: "System Engineer specializing in Model-Based Development (MBD), Battery Management Systems (BMS), and BMS testing chamber design.",
       image: "/team/Akilasekar.png"
     },
     {
-      name: "Agilan",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Agilan Arulchelvam",
+      designation: "Machine Learning Engineer",
+      description: "A dynamic Data Analyst proficient in SQL, Python, and Data Visualization. ",
       image: "/team/Agilan.png"
     },
     {
-      name: "Maari",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
-      image: "/team/maari.png"
+      name: "Maarimuthu Rajagopal",
+      designation: "Embedded Firmware Engineer",
+      description: "Experienced in developing and optimizing firmware for microcontrollers with expertise in UART, SPI, CAN, and I2C protocols.",
+      image: "/team/Maari.png"
     },
     {
-      name: "Tiberiu",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
-      image: "/team/Tiberiu.png"
-    },
-     {
-      name: "Yashar",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
-      image: "/team/Yashar.png"
-    },
-     {
-      name: "Muralidharan",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Murali Dharan",
+      designation: "Software Tester",
+      description: "Drives quality assurance efforts by leveraging cutting-edge tools and methodologies, including Cucumber, to ensure the delivery of robust and reliable software solutions.",
       image: "/team/Muralidharan.png"
     },
      {
-      name: "Divya",
-      designation: "Senior Research Scientist",
-      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      name: "Divya Rosy",
+      designation: "Front End Developer",
+      description: "Specializes in React development, crafting dynamic and user-friendly web interfaces that deliver exceptional user experiences.",
       image: "/team/Divya.png"
     }
   ];
