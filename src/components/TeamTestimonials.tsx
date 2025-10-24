@@ -6,34 +6,88 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const TeamTestimonials = () => {
   const teamMembers = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Rameshkumar Rajarathinam",
       designation: "Chief Technology Officer",
       description: "Leading our R&D initiatives with 15+ years in battery technology and renewable energy systems. Pioneering next-generation BMS solutions.",
-      image: "/team/sarah-chen.jpg"
+      image: "/team/RameshKumar.png"
     },
     {
-      name: "Michael Rodriguez",
+      name: "Faouzi",
       designation: "Head of Engineering",
       description: "Overseeing product development and ensuring our systems meet the highest safety standards. Expert in grid-scale energy storage solutions.",
-      image: "/team/michael-rodriguez.jpg"
+      image: "/team/Faouzi.png"
     },
     {
-      name: "Dr. Priya Patel",
+      name: "Fabio",
       designation: "Director of Sustainability",
       description: "Driving our commitment to sustainable practices and circular economy principles. Leading our battery recycling and second-life programs.",
-      image: "/team/priya-patel.jpg"
+      image: "/team/Fabio.png"
     },
     {
-      name: "James Thompson",
+      name: "Prabhakaran",
       designation: "VP of Operations",
       description: "Ensuring seamless delivery and deployment of our energy solutions worldwide. 20+ years experience in industrial automation.",
-      image: "/team/james-thompson.jpg"
+      image: "/team/Prabhakaran.png"
     },
     {
-      name: "Dr. Li Wei",
+      name: "Rajavel Rajendran",
       designation: "Senior Research Scientist",
       description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
-      image: "/team/li-wei.jpg"
+      image: "/team/Rajavelu.png"
+    },
+    {
+      name: "Nalla Shivam ",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Nallasivam.png"
+    },
+    {
+      name: "Hari Ramar",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Hari.png"
+    },
+    {
+      name: "Akilasekar",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Akilasekar.png"
+    },
+    {
+      name: "Agilan",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Agilan.png"
+    },
+    {
+      name: "Maari",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/maari.png"
+    },
+    {
+      name: "Tiberiu",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Tiberiu.png"
+    },
+     {
+      name: "Yashar",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Yashar.png"
+    },
+     {
+      name: "Muralidharan",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Muralidharan.png"
+    },
+     {
+      name: "Divya",
+      designation: "Senior Research Scientist",
+      description: "Developing advanced battery chemistries and thermal management systems. PhD in Materials Science from MIT.",
+      image: "/team/Divya.png"
     }
   ];
 
