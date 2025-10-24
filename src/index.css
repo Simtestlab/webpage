@@ -99,3 +99,8 @@ All colors MUST be HSL.
     text-wrap: balance;
   }
 }
+
+/* Smooth scrolling for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}

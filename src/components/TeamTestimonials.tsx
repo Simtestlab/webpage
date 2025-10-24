@@ -155,7 +155,7 @@ const TeamTestimonials = () => {
   }, [isInView]);
 
   return (
-    <section ref={sectionRef} className="py-32 px-6 bg-muted/30">
+    <section ref={sectionRef} className="py-32 px-6 bg-muted/30" id="team">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

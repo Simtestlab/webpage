@@ -5,7 +5,7 @@ const Mission = () => {
   const { ref: contentRef, isVisible: contentVisible } = useScrollReveal();
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-gradient-to-b from-background to-muted/30">
+  <section className="py-24 md:py-32 px-6 bg-gradient-to-b from-background to-muted/30 scroll-mt-20 md:scroll-mt-24" id="mission">
       <div className="max-w-6xl mx-auto">
         <div 
           ref={headerRef}

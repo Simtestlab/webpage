@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden" id="hero">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -31,10 +31,7 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-          <Button size="lg" className="px-8 py-6 text-lg font-semibold">
-            Explore Solutions
-          </Button>
-          <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold">
+          <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold" href="#mission">
             Learn More
           </Button>
         </div>
