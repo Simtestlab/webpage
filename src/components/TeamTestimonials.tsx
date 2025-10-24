@@ -36,10 +36,22 @@ const TeamTestimonials = () => {
       image: "/team/Yashar.png"
     },
     {
+      name: "Sajendra Prasad Chandran",
+      designation: "Human Resource Manager",
+      description: "The Human Resources Specialist leads strategic initiatives in talent acquisition, employee engagement, and workforce development to foster a thriving organizational culture.",
+      image: "/team/Sajendraprasad.png"
+    },
+    {
       name: "Prabhakaran Sundaralingam",
       designation: "Hardware Engineer",
       description: "A seasoned Hardware Engineer with over 5 years of experience in electronics product development, focusing on the entire lifecycle from circuit design to design verification testing.",
       image: "/team/Prabhakaran.png"
+    },
+    {
+      name: "Vinay Kumar S Lokare",
+      designation: "Senior Software Engineer",
+      description: "Embedded Software Engineer with expertise in UART, SPI, CAN, and I2C protocols, specializing in developing and optimizing software for microcontrollers.",
+      image: "/team/Vinay.png"
     },
     {
       name: "Rajavel Rajendiran",
@@ -84,10 +96,22 @@ const TeamTestimonials = () => {
       image: "/team/Muralidharan.png"
     },
      {
+      name: "Saran Muthumanickam",
+      designation: "Research Engineer",
+      description: "Specializes in bioinformatics and genetics, driving innovation at the intersection of computational science and biology.",
+      image: "/team/Saran.png"
+    },
+    {
       name: "Divya Rosy",
       designation: "Front End Developer",
       description: "Specializes in React development, crafting dynamic and user-friendly web interfaces that deliver exceptional user experiences.",
       image: "/team/Divya.png"
+    },
+    {
+      name: "Giri Velavan Nijalingappan",
+      designation: "Junior Embedded Engineer",
+      description: "Embedded Software Engineer specializing in developing and optimizing software for microcontrollers and embedded systems.",
+      image: "/team/Girivelavan.png"
     }
   ];
 
