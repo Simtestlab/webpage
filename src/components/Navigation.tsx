@@ -2,7 +2,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border/50 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group transition-transform hover:scale-105">
+        <a href="#hero" className="flex items-center gap-3 group transition-transform hover:scale-105">
           <img
             src="/logo.png"
             alt="Simtestlab logo"

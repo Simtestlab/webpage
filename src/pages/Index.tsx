@@ -21,9 +21,6 @@ const Index = () => {
           <Advantages />
         </div>
         <TeamTestimonials />
-        <div id="contact">
-          <FinalCTA />
-        </div>
       </main>
       <Footer />
     </div>
